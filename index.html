@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Earnings Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 160px;
+      margin: 0 10px;
+    }
+
+    .main {
+      max-width: 600px;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .result {
+      margin-top: 25px;
+      padding: 15px;
+      background: #f1f1f1;
+      border-left: 5px solid #4CAF50;
+      border-radius: 5px;
+    }
+
+    .result div {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .ad-top, .ad-bottom {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Banner Ad -->
+  <div class="ad-top">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '532a4896ae5c2a0aeefab04bd22859dd',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/532a4896ae5c2a0aeefab04bd22859dd/invoke.js"></script>
+  </div>
+
+  <div class="wrapper">
+    <!-- Sidebar Ad Left -->
+    <div class="sidebar">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '532a4896ae5c2a0aeefab04bd22859dd',
+          'format' : 'iframe',
+          'height' : 600,
+          'width' : 160,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/532a4896ae5c2a0aeefab04bd22859dd/invoke.js"></script>
+    </div>
+
+    <!-- Main Calculator Section -->
+    <div class="main">
+      <h1>YouTube Earnings Calculator</h1>
+
+      <label for="views">Enter Views:</label>
+      <input type="number" id="views" placeholder="e.g. 10000" />
+
+      <label for="country">Select Country:</label>
+      <select id="country">
+        <option value="8.0">USA</option>
+        <option value="6.5">Canada</option>
+        <option value="6.0">UK</option>
+        <option value="5.5">Australia</option>
+        <option value="1.2">India</option>
+        <option value="0.8">Pakistan</option>
+        <option value="1.0">Indonesia</option>
+        <option value="1.5">Others</option>
+      </select>
+
+      <label for="currency">Select Currency:</label>
+      <select id="currency">
+        <option value="1" data-symbol="$">USD</option>
+        <option value="83" data-symbol="₹">INR</option>
+        <option value="0.92" data-symbol="€">EUR</option>
+        <option value="0.79" data-symbol="£">GBP</option>
+      </select>
+
+      <div class="result">
+        <div id="perView">Per View: -</div>
+        <div id="perThousand">Per 1000 Views: -</div>
+        <div id="totalEarnings">Total Earnings: -</div>
+      </div>
+
+      <!-- Mid Ad -->
+      <div class="ad-mid" style="text-align:center; margin-top: 30px;">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '532a4896ae5c2a0aeefab04bd22859dd',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/532a4896ae5c2a0aeefab04bd22859dd/invoke.js"></script>
+      </div>
+    </div>
+
+    <!-- Sidebar Ad Right -->
+    <div class="sidebar">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '532a4896ae5c2a0aeefab04bd22859dd',
+          'format' : 'iframe',
+          'height' : 600,
+          'width' : 160,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/532a4896ae5c2a0aeefab04bd22859dd/invoke.js"></script>
+    </div>
+  </div>
+
+  <!-- Bottom Banner Ad -->
+  <div class="ad-bottom">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '532a4896ae5c2a0aeefab04bd22859dd',
+        'format' : 'iframe',
+        'height' : 600,
+        'width' : 160,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/532a4896ae5c2a0aeefab04bd22859dd/invoke.js"></script>
+  </div>
+
+  <!-- JS Logic -->
+  <script>
+    const viewsInput = document.getElementById("views");
+    const countrySelect = document.getElementById("country");
+    const currencySelect = document.getElementById("currency");
+    const perViewEl = document.getElementById("perView");
+    const perThousandEl = document.getElementById("perThousand");
+    const totalEarningsEl = document.getElementById("totalEarnings");
+
+    function calculate() {
+      const views = parseFloat(viewsInput.value);
+      const cpm = parseFloat(countrySelect.value);
+      const rate = parseFloat(currencySelect.value);
+      const symbol = currencySelect.options[currencySelect.selectedIndex].dataset.symbol;
+
+      if (isNaN(views) || views <= 0) {
+        perViewEl.textContent = "Per View: -";
+        perThousandEl.textContent = "Per 1000 Views: -";
+        totalEarningsEl.textContent = "Total Earnings: -";
+        return;
+      }
+
+      const perThousand = cpm * rate;
+      const perView = perThousand / 1000;
+      const total = views * perView;
+
+      perViewEl.textContent = `Per View: ${symbol}${perView.toFixed(4)}`;
+      perThousandEl.textContent = `Per 1000 Views: ${symbol}${perThousand.toFixed(2)}`;
+      totalEarningsEl.textContent = `Total Earnings: ${symbol}${total.toFixed(2)}`;
+    }
+
+    viewsInput.addEventListener("input", calculate);
+    countrySelect.addEventListener("change", calculate);
+    currencySelect.addEventListener("change", calculate);
+  </script>
+</body>
+</html>
